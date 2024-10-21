@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.container{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 2fr 7fr 2fr 2fr 3fr ;
+    grid-template-columns: auto auto auto auto  ;
+    padding: 20px;
+    
+}
+.items{
+    display: grid;
+    place-items: center;
+    color:white;
+}
+.header{
+    background-color: rgb(3, 2, 72);
+    grid-column: span 1;
+}
+.menu{
+    background-color: red;
+    grid-column: span 3 ;
+}
+.hero{
+    background-color: rgb(46, 149, 253);
+    grid-column: span 4;
+}
+.main{
+    background-color: rgb(3, 2, 72);
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.empty{
+    background-color: white;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.image{
+    background-color: rgb(103, 255, 194);
+    grid-column: span 1;
+}
+.extra{
+    background-color: rgb(21, 148, 97);
+     grid-column: span 1;
+}
+.banner{
+    background-color: yellow;
+    grid-column: span 4;
+}
+@media screen and (max-width:900px){
+    .container{
+        display: grid;
+        grid-template-rows: 2fr 5fr 5fr 3fr 3fr ;
+        grid-template-columns: auto auto auto auto  ;
+    }
+    .header{
+        grid-column: span 4;
+        order: 1;
+    }
+    .hero{
+        grid-column: span 4;
+        order: 2;
+    }
+    .menu{
+        grid-column: span 1;
+        grid-row: span 3 ;
+        order: 3;
+    }
+    .main{
+        grid-column: span 3;
+        grid-row: span 1;
+        order: 4;
+    }
+    .empty{
+        display: none;
+    }
+    .banner{
+        grid-column: span 3;
+        order: 5;
+       
+    }
+    .extra{
+        grid-column :span 2;
+        order: 6;
+    }
+    .image{
+        grid-column :span 1;
+        order: 7;
+    } 
+}
+@media screen and (max-width:500px){
+    .container{
+       display:grid;
+       grid-template-rows: 1fr 1fr 3fr 3fr 2fr 2fr 2fr;
+       grid-template-columns: auto auto auto auto;
+       width: 100%
+    }
+  
+    .menu{
+        grid-row: span 1;
+        grid-column: span  4;
+        order:2
+    }
+    .hero{
+        order:3
+
+    }
+    .main{
+        order:4;
+        grid-column: span  4;
+    }
+    .banner{
+        order:5;
+        grid-column: span  4;
+    }
+    .extra{
+        order:6;
+        grid-column: span 1;
+        grid-column: span  4;
+    }
+    .image{
+        order:7;
+        grid-row: span 7;
+        grid-column: span  4;
+    }
+}
